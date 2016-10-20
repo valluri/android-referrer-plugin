@@ -39,7 +39,7 @@ private void trackReferrerAttributes(Context context, String rawReferrer) {
 
         String json = "{\"referrer\":\"" + referrer + "\"}";
         Log.d("Receiver", json);
-        SharedPreferences sharedPreferences = context.getSharedPreferences("NativeStorage", Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = context.getSharedPreferences("MainActivity", Context.MODE_PRIVATE);
     	Editor edit = sharedPreferences.edit();
     	edit.putString("referrer", json);
     	edit.commit();
