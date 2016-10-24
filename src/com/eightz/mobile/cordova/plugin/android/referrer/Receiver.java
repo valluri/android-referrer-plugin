@@ -43,6 +43,11 @@ private void trackReferrerAttributes(Context context, String rawReferrer) {
     	Editor edit = sharedPreferences.edit();
     	edit.putString("referrer", json);
     	edit.commit();
+    
+        SharedPreferences sharedPreferences1 = context.getSharedPreferences("NativeStorage", Context.MODE_PRIVATE);
+        Editor edit1 = sharedPreferences1.edit();
+        edit1.putString("referrer", json);
+        edit1.commit();
     }
  
 } // end of class
